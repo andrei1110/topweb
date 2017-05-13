@@ -45,7 +45,7 @@
 				<li><a href="#fale-conosco">Fale conosco</a></li>
 				<form class="navbar-form navbar-left">
 					<div class="form-group">
-						<input class="form-control" placeholder="Buscar...">
+						<input type="search" class="form-control" placeholder="Buscar...">
 					</div>
 				</form>
 			</ul>
@@ -336,9 +336,35 @@
 <div id="fale-conosco" class="col-md-12 div-branca">
 	<div class="container">
 		<h1> Fale Conosco </h1>
+		<div class="col-xs-4">
+			<form class="form-group">
+				<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome completo" />
+				<br/>
+				<input type="email" class="form-control" name="email" id="email" placeholder="E-mail" />
+				<br/>
+				<textarea rows="4" class="form-control" id="mensagem" placeholder="Sua mensagem..."></textarea>
+				<br/>
+				<button class="btn btn-default"> Enviar </button>
+			</form>
+		</div>
+		<div class="col-xs-4">
+			<h4>Localização</h4>
+			<p><strong>Endereço:</strong> Av. Getúlio Vargas - S/N<br/>Centro, Chapecó, SC</p>
+			<p><strong>Telefone:</strong> +55(49)3323-3323<br/><strong>WhatsApp:</strong> +55(49)9 9797-9797</p>
+			<p><strong>E-mail:</strong> contato@produtosgamers.com.br</p>
+		</div>
+		<div class="col-xs-4">
+			<h4>Mapa</h4>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3552.121831185713!2d-52.620791849506084!3d-27.08945420703972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b42819acab77%3A0x38952d4f0f2c6cbb!2sAv.+Get%C3%BAlio+Dorneles+Vargas%2C+Chapec%C3%B3+-+SC!5e0!3m2!1spt-BR!2sbr!4v1494640224758" 
+			style="position:relative;" frameborder="0" style="border:0" allowfullscreen>
+			</iframe>
+		</div>
 	</div>
 </div>
 <!-- Fim fale conosco -->
+
+<div id="rodape" class="col-md-12 div-preta">
+</div>
 
 </body>
 

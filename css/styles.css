@@ -17,13 +17,13 @@ body{
 }
 
 .div-preta{
-	min-height: 300px;
+	min-height: 200px;
 	background-color: black;
 	color:white;
 }
 
 .div-branca{
-	min-height: 300px;
+	min-height: 200px;
 	background-color: white;
 }
 
