@@ -1,4 +1,4 @@
-var data = {images:[
+var mouseData = {images:[
 	{
 		src: "img/mouse1.fw.png",
 		title: "Mouse Razer",
@@ -122,24 +122,24 @@ var acessoriesData = {images:[
 		alt: "Joystick Razer iluminado com LED",
 		descr: "Joystick Razer iluminado com LED",
 	}
-]};
+], name: "Acessórios"};
 
-var source = $("#mouse-script").html();
-var template = Handlebars.compile(source);
-var output = template(data);
-$("#mouses").html(output);
+var mouseSource = $("#mouse-script").html();
+var mouseTemplate = Handlebars.compile(mouseSource);
+var mouseOutput = mouseTemplate(mouseData);
+$("#mouses").html(mouseOutput);
 
 var keyboardSource = $("#keyboard-script").html();
 var keyboardTemplate = Handlebars.compile(keyboardSource);
-var keyboardOutput = template(keyboardData);
+var keyboardOutput = keyboardTemplate(keyboardData);
 $("#teclados").html(keyboardOutput);
 
 var hsSource = $("#hs-script").html();
 var hsTemplate = Handlebars.compile(hsSource);
-var hsOutput = template(hsData);
+var hsOutput = hsTemplate(hsData);
 $("#fones").html(hsOutput);
 
 var acessoriesSource = $("#acessories-script").html();
 var acessoriesTemplate = Handlebars.compile(acessoriesSource);
-var acessoriesOutput = template(acessoriesData);
+var acessoriesOutput = acessoriesTemplate(acessoriesData);
 $("#acessorios").html(acessoriesOutput);
