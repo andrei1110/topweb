@@ -39,3 +39,7 @@ body{
 .product-img{
 	max-height: 160px;
 }
+
+.list-unstyled a{
+	color: #fff;
+}

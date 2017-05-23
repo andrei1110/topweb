@@ -3,10 +3,18 @@
 
 <header>
 
+	<!-- Aquivos de scripts -->
 	<script type="text/javascript" src ="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src ="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src ="js/handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src ="js/scrollreveal.min.js"></script>
+	<!-- scripts personalizados -->
 	<script type="text/javascript" src ="js/script.js"></script>
+	
+	<!-- Arquivos de estilos -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Arquivo de estilos personalizados -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	
 </header>
@@ -22,27 +30,27 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button> 
-			<a href="#principal" class="navbar-brand">
+			<a href="#principal" class="page-scroll navbar-brand">
 				<img src="img/Untitled-3.fw.png" style="max-height:32px">
 			</a>
 		</div>
 		<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
 			<ul class="nav navbar-nav">
-				<li><a href="#sobre">Sobre</a></li>
+				<li><a class="page-scroll" href="#sobre">Sobre</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produtos
 					<span class="caret"></span></a>
 					<ul class="dropdown-menu"> 
-						<li><a href="#teclados">Teclados</a></li>
-						<li><a href="#mouses">Mouses</a></li>
-						<li><a href="#fones">Fones</a></li>
+						<li><a class="page-scroll" href="#teclados">Teclados</a></li>
+						<li><a class="page-scroll" href="#mouses">Mouses</a></li>
+						<li><a class="page-scroll" href="#fones">Fones</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#acessorios">Acessórios</a></li>
+						<li><a class="page-scroll" href="#acessorios">Acessórios</a></li>
 					</ul>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#fale-conosco">Fale conosco</a></li>
+				<li><a class="page-scroll" href="#fale-conosco">Fale conosco</a></li>
 				<form class="navbar-form navbar-left">
 					<div class="form-group">
 						<input type="search" class="form-control" placeholder="Buscar...">
@@ -123,111 +131,43 @@
 
 <!-- Teclados -->
 <div id="teclados" class="col-md-12 div-preta">
+	<script id="keyboard-script" type="text/x-handlebars-template">
 	<div class="container">
 		<h1> Teclados </h1>
 		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/teclado1.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Teclado CM</h3>
-						<p>Teclado mecânico CM quick fire tk branco</p>
+			{{#each images}}
+				<div class="col-xs-6 col-md-3" data-id="{{@index}}">
+					<div class="thumbnail product">
+						<img src="{{src}}" alt="{{alt}}" class="product-img">
+						<h3>{{title}}</h3>
+						<p>{{descr}}</p>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/teclado2.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Teclado HyperX</h3>
-						<p>Teclado mecânico HyperX preto e vermelho</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/teclado3.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Teclado Razer</h3>
-						<p>Teclado mecânico Razer Blackwidow Chroma</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/teclado4.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Teclado Logitech</h3>
-						<p>Teclado mecânico Logitech Spectrum RGB</p>
-					</div>
-				</div>
-			</div>
+			{{/each}}
 		</div>
 	</div>
+</script>
 </div>
 <!-- Fim teclados -->
 
 <!-- mouses -->
 <div id="mouses" class="col-md-12 div-preta">
-	<div class="container">
-		<h1> Mouses </h1>
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse1.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Razer</h3>
-						<p>Mouse Razer Chroma</p>
+	<script id="mouse-script" type="text/x-handlebars-template">
+		<div class="container">
+			<h1> Mouses </h1>
+			<div class="row">
+				{{#each images}}
+					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
+						<div class="thumbnail product">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse2.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Razer</h3>
-						<p>Mouse Razer Deathadder verde</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse4.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Razer</h3>
-						<p>Mouse Razer Abysus azul</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse3.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Razer</h3>
-						<p>Mouse Razer 15 botões</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse5.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Zowie</h3>
-						<p>Mouse Zowie preto e branco</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/mouse6.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Logitech</h3>
-						<p>Mouse Logitech preto e azul</p>
-					</div>
-				</div>
+				{{/each}}
 			</div>
 		</div>
-	</div>
+	</script>
 </div>
 <!-- Fim mouses -->
 
@@ -364,7 +304,44 @@
 <!-- Fim fale conosco -->
 
 <div id="rodape" class="col-md-12 div-preta">
+	<div class="container">
+		<br/>
+		<div class="row">
+			<div class="col-xs-4">
+				<h4>Mapa do site</h4>
+				<ul class="list-unstyled">
+					<li> <a class="page-scroll" href="#principal">Home</a></li>
+					<li> <a class="page-scroll" href="#sobre">Sobre</a></li>
+					<li> Produtos
+						<ul> 
+							<li> <a class="page-scroll" href="#teclados">Teclados</a></li>
+							<li> <a class="page-scroll" href="#mouses">Mouses</a></li>
+							<li> <a class="page-scroll" href="#mouses">Fones</a></li>
+							<li> <a class="page-scroll" href="#mouses">Acessórios</a></li>
+						</ul>
+					</li>
+					<li> <a class="page-scroll" href="#principal">Fale conosco</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4">
+				<h4>Links</h4>
+			</div>
+			<div class="col-xs-4">
+				<h4>Social</h4>
+					<a href="http://facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook logo" style="max-height: 60px;"></a>
+					<a href="http://twitter.com" target="_blank"><img src="img/twitter.png" alt="twitter logo" style="max-height: 60px;"></a>
+					<a href="http://instagram.com" target="_blank"><img src="img/instagram.png" alt="instagram logo" style="max-height: 60px;"></a>
+					<a href="http://snapchat.com" target="_blank"><img src="img/snapchat.png" alt="snapchat logo" style="max-height: 60px;"></a>
+			</div>
+		</div>
+		<div class="row">
+			<p class="text-center">Todos os direitos reservados - © 2017 - Create by: Andrei Toledo - Créditos das imagens <a href="credits.txt" target="_blank">aqui</a></p>
+		</div>
+	</div>
 </div>
+
+<!-- scripts que devem ser carregados no final da página -->
+<script type="text/javascript" src ="js/product-script.js"></script>
 
 </body>
 
