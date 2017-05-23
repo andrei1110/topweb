@@ -132,21 +132,21 @@
 <!-- Teclados -->
 <div id="teclados" class="col-md-12 div-preta">
 	<script id="keyboard-script" type="text/x-handlebars-template">
-	<div class="container">
+		<div class="container">
 		<h1> Teclados </h1>
-		<div class="row">
-			{{#each images}}
-				<div class="col-xs-6 col-md-3" data-id="{{@index}}">
-					<div class="thumbnail product">
-						<img src="{{src}}" alt="{{alt}}" class="product-img">
-						<h3>{{title}}</h3>
-						<p>{{descr}}</p>
+			<div class="row">
+				{{#each images}}
+					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
+						<div class="thumbnail product">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
-			{{/each}}
+				{{/each}}
+			</div>
 		</div>
-	</div>
-</script>
+	</script>
 </div>
 <!-- Fim teclados -->
 
@@ -154,7 +154,7 @@
 <div id="mouses" class="col-md-12 div-preta">
 	<script id="mouse-script" type="text/x-handlebars-template">
 		<div class="container">
-			<h1> Mouses </h1>
+		<h1> Mouses </h1>
 			<div class="row">
 				{{#each images}}
 					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
@@ -173,104 +173,47 @@
 
 <!-- Fones -->
 <div id="fones" class="col-md-12 div-preta">
-	<div class="container">
+	<script id="hs-script" type="text/x-handlebars-template">
+		<div class="container">
 		<h1> Fones </h1>
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/fone1.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Fone HyperX</h3>
-						<p>Fone com microfone HyperX Revolver preto</p>
+			<div class="row">
+				{{#each images}}
+					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
+						<div class="thumbnail product">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/fone2.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Fone Razer</h3>
-						<p>Fone com microfone Razer Men O' War preto</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/fone3.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Fone Logitech</h3>
-						<p>Fone Logitech sem fio 7.1 preto e azul</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/fone4.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Fone Steelseries</h3>
-						<p>Fone Steelseries Diablo III preto e vermelho</p>
-					</div>
-				</div>
+				{{/each}}
 			</div>
 		</div>
-	</div>
+	</script>
 </div>
 <!-- Fim de fones -->
 
 <!-- Acessórios -->
 <div id="acessorios" class="col-md-12 div-preta">
-	<div class="container">
+	<script id="acessories-script" type="text/x-handlebars-template">
+		<div class="container">
 		<h1> Acessórios </h1>
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/acessorio1.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mousepad Razer</h3>
-						<p>Mousepad Razer Goliathus verde</p>
+			<div class="row">
+				{{#each images}}
+					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
+						<div class="thumbnail product">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/acessorio2.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mousepad HyperX</h3>
-						<p>Mousepad HyperX preto gigante</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/acessorio3.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Mouse Bungee</h3>
-						<p>Mouse Bungee Razer preto</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/acessorio4.fw.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Volante Logitech</h3>
-						<p>Volante Logitech G29</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="thumbnail product">
-					<img src="img/acessorio5.png" alt="..." class="product-img">
-					<div class="caption">
-						<h3>Joystick Razer</h3>
-						<p>Joystick Razer iluminado com LED</p>
-					</div>
-				</div>
+				{{/each}}
 			</div>
 		</div>
-	</div>
+	</script>
 </div>
 <!-- Fim acessórios -->
+
+
 
 <!-- Fale conosco -->
 <div id="fale-conosco" class="col-md-12 div-branca">

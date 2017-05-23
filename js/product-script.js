@@ -63,7 +63,67 @@ var keyboardData = {images:[
 		descr: "Teclado mecânico Logitech Spectrum RGB",
 	}
 ]};
- 
+
+var hsData = {images:[
+	{
+		src: "img/fone1.fw.png",
+		title: "Fone HyperX",
+		alt: "Fone com microfone HyperX Revolver preto com detales em led Vermelhos",
+		descr: "Fone com microfone HyperX Revolver preto",
+	},
+	{
+		src: "img/fone2.fw.png",
+		title: "Fone Razer",
+		alt: "Fone da marca Razer preto com microfone retrátil e logo da marca iluminado com led",
+		descr: "Fone com microfone Razer Men O' War preto",
+	},
+	{
+		src: "img/fone3.fw.png",
+		title: "Fone Logitech",
+		alt: "Fone Logitech sem fio 7.1 preto e azul",
+		descr: "Fone Logitech sem fio, com microfone preto e azul",
+	},
+	{
+		src: "img/fone4.fw.png",
+		title: "Fone Steelseries",
+		alt: "Fone Steelseries Diablo III preto e vermelho",
+		descr: "Fone Steelseries Diablo III preto e vermelho",
+	}
+]};
+
+var acessoriesData = {images:[
+	{
+		src: "img/acessorio1.fw.png",
+		title: "Mousepad Razer",
+		alt: "MMousepad Razer Goliathus verde",
+		descr: "Mousepad Razer Goliathus verde",
+	},
+	{
+		src: "img/acessorio2.fw.png",
+		title: "Mousepad HyperX",
+		alt: "Mousepad HyperX preto gigante que cobre toda a mesa",
+		descr: "Mousepad HyperX preto gigante",
+	},
+	{
+		src: "img/acessorio3.fw.png",
+		title: "Mouse Bungee Razer",
+		alt: "Mouse Bungee Razer preto",
+		descr: "Mouse Bungee Razer preto",
+	},
+	{
+		src: "img/acessorio4.fw.png",
+		title: "olante Logitech",
+		alt: "olante Logitech com dois eixos, 3 pedais, cambio e freio de mão",
+		descr: "Volante Logitech G29",
+	},
+	{
+		src: "img/acessorio5.png",
+		title: "Joystick Razer",
+		alt: "Joystick Razer iluminado com LED",
+		descr: "Joystick Razer iluminado com LED",
+	}
+]};
+
 var source = $("#mouse-script").html();
 var template = Handlebars.compile(source);
 var output = template(data);
@@ -73,3 +133,13 @@ var keyboardSource = $("#keyboard-script").html();
 var keyboardTemplate = Handlebars.compile(keyboardSource);
 var keyboardOutput = template(keyboardData);
 $("#teclados").html(keyboardOutput);
+
+var hsSource = $("#hs-script").html();
+var hsTemplate = Handlebars.compile(hsSource);
+var hsOutput = template(hsData);
+$("#fones").html(hsOutput);
+
+var acessoriesSource = $("#acessories-script").html();
+var acessoriesTemplate = Handlebars.compile(acessoriesSource);
+var acessoriesOutput = template(acessoriesData);
+$("#acessorios").html(acessoriesOutput);
