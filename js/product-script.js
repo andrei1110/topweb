@@ -143,3 +143,47 @@ var acessoriesSource = $("#acessories-script").html();
 var acessoriesTemplate = Handlebars.compile(acessoriesSource);
 var acessoriesOutput = acessoriesTemplate(acessoriesData);
 $("#acessorios").html(acessoriesOutput);
+
+mouseSource = $("#modal").html();
+var geraTemplateModal = Handlebars.compile(mouseSource);
+function displayModalMouse(event){
+	var indice = $(this).data("id");
+	var html = geraTemplateModal(mouseData.images[indice]);
+	$("#modal-container").html(html);
+	$("#imageModal").modal('show');
+}
+
+$(".mouse").click(displayModalMouse);
+
+keyboardSource = $("#modal").html();
+var geraTemplateModal = Handlebars.compile(keyboardSource);
+function displayModalKeyboard(event){
+	var indice = $(this).data("id");
+	var html = geraTemplateModal(keyboardData.images[indice]);
+	$("#modal-container").html(html);
+	$("#imageModal").modal('show');
+}
+
+$(".keyboard").click(displayModalKeyboard);
+
+hsSource = $("#modal").html();
+var geraTemplateModal = Handlebars.compile(hsSource);
+function displayModalHeadset(event){
+	var indice = $(this).data("id");
+	var html = geraTemplateModal(hsData.images[indice]);
+	$("#modal-container").html(html);
+	$("#imageModal").modal('show');
+}
+
+$(".headset").click(displayModalHeadset);
+
+acessoriesSource = $("#modal").html();
+var geraTemplateModal = Handlebars.compile(acessoriesSource);
+function displayModalAcessories(event){
+	var indice = $(this).data("id");
+	var html = geraTemplateModal(acessoriesData.images[indice]);
+	$("#modal-container").html(html);
+	$("#imageModal").modal('show');
+}
+
+$(".acessories").click(displayModalAcessories);

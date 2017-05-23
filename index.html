@@ -136,8 +136,8 @@
 		<h1> Teclados </h1>
 			<div class="row">
 				{{#each images}}
-					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
-						<div class="thumbnail product">
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product keyboard" data-id="{{@index}}">
 							<img src="{{src}}" alt="{{alt}}" class="product-img">
 							<h3>{{title}}</h3>
 							<p>{{descr}}</p>
@@ -157,8 +157,8 @@
 		<h1> Mouses </h1>
 			<div class="row">
 				{{#each images}}
-					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
-						<div class="thumbnail product">
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product mouse" data-id="{{@index}}">
 							<img src="{{src}}" alt="{{alt}}" class="product-img">
 							<h3>{{title}}</h3>
 							<p>{{descr}}</p>
@@ -178,8 +178,8 @@
 		<h1> Fones </h1>
 			<div class="row">
 				{{#each images}}
-					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
-						<div class="thumbnail product">
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product headset" data-id="{{@index}}">
 							<img src="{{src}}" alt="{{alt}}" class="product-img">
 							<h3>{{title}}</h3>
 							<p>{{descr}}</p>
@@ -199,8 +199,8 @@
 		<h2> Acessórios </h2>
 			<div class="row">
 				{{#each images}}
-					<div class="col-xs-6 col-md-3" data-id="{{@index}}">
-						<div class="thumbnail product">
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product acessories" data-id="{{@index}}">
 							<img src="{{src}}" alt="{{alt}}" class="product-img">
 							<h3>{{title}}</h3>
 							<p>{{descr}}</p>
@@ -282,6 +282,21 @@
 		</div>
 	</div>
 </div>
+
+<div id="modal-container">
+</div>
+
+<script id="modal" type="text/x-handlebars-template">
+  <div id="imageModal" class="modal fade">
+	<div class="modal-dialog" style="max-width:950">
+	  <div class="modal-content">
+		<div class="modal-body">
+		  <img style="width:100%" src="{{src}}">
+		</div>
+	  </div>
+	</div>
+  </div>
+</script>
 
 <!-- scripts que devem ser carregados no final da página -->
 <script type="text/javascript" src ="js/product-script.js"></script>
