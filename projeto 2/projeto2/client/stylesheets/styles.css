@@ -1,0 +1,45 @@
+body{
+	background-color:black;
+}
+.navbar{
+	background-color: white;
+	border-style: none;
+	border-bottom-style: solid;
+	border-radius: 0px;
+
+}
+
+#principal{
+	width: 100%;
+	min-height: 600px;
+	/*background-image: url("../img/background.png");*/
+	background-color: black;
+}
+
+.div-preta{
+	min-height: 200px;
+	background-color: black;
+	color:white;
+}
+
+.div-branca{
+	min-height: 200px;
+	background-color: white;
+}
+
+.product{
+	background-color:transparent;
+}
+
+.product .caption{
+	color:white;
+}
+
+
+.product-img{
+	max-height: 160px;
+}
+
+.list-unstyled a{
+	color: #fff;
+}
