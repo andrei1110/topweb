@@ -112,8 +112,8 @@ var acessoriesData = {images:[
 	},
 	{
 		src: "img/acessorio4.fw.png",
-		title: "olante Logitech",
-		alt: "olante Logitech com dois eixos, 3 pedais, cambio e freio de mão",
+		title: "Volante Logitech",
+		alt: "Volante Logitech com dois eixos, 3 pedais, cambio e freio de mão",
 		descr: "Volante Logitech G29",
 	},
 	{

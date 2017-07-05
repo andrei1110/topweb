@@ -4,77 +4,11 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
 import '../imports/banco.js';
 
-var mouseData = [
-	{
-		src: "img/mouse1.fw.png",
-		title: "Mouse Razer",
-		alt: "Mouse preto razer com leds RGB",
-		descr: "Mouse Razer Chroma",
-	},
-	{
-		src: "img/mouse2.fw.png",
-		title: "Mouse Razer",
-		alt: "Mouse razer preto com led verde na logo da marca",
-		descr: "Mouse Razer Deathadder verde",
-	},
-	{
-		src: "img/mouse3.png",
-		title: "Mouse Razer",
-		alt: "Mouse Razer de 15 botões, sendo eles 12 laterais, botão direito, botão esquedo e do scroll",
-		descr: "Mouse Razer de 15 botões",
-	},
-	{
-		src: "img/mouse4.fw.png",
-		title: "Mouse Razer",
-		alt: "Mouse Razer de entrada preto com o logo da marca em led azul",
-		descr: "Mouse Razer Abysus azul",
-	},
-	{
-		src: "img/mouse5.fw.png",
-		title: "Mouse Zowie",
-		alt: "Mouse da marca Zowie preto com o logo da marca branco",
-		descr: "Mouse Zowie Preto e branco",
-	},
-	{
-		src: "img/mouse6.fw.png",
-		title: "Mouse Logitech",
-		alt: "Mouse da marca Logitech preto com o logo da marca em led azul e leds azuis na lateral",
-		descr: "Mouse Logitech preto e azul",
-	}
-];
-
-var keyboardData = [
-	{
-		src: "img/teclado1.fw.png",
-		title: "Teclado CM",
-		alt: "Teclado mecânico branco da marca CM com teclas pretas",
-		descr: "Teclado mecânico CM quick fire tk branco",
-	},
-	{
-		src: "img/teclado2.fw.png",
-		title: "Teclado HyperX",
-		alt: "Teclado da marca HyperX preto retroiluminado com leds vermelhos",
-		descr: "Teclado mecânico HyperX preto e vermelho",
-	},
-	{
-		src: "img/teclado3.fw.png",
-		title: "Teclado Razer",
-		alt: "Teclado da marca razer preto com leds RGB retroiluminando as teclas",
-		descr: "Teclado mecânico Razer Blackwidow Chroma",
-	},
-	{
-		src: "img/teclado4.fw.png",
-		title: "Teclado Logitech",
-		alt: "Teclado da marca Logitech preto retroiluminado com leds RGB",
-		descr: "Teclado mecânico Logitech Spectrum RGB",
-	}
-];
-
 var acessoriesData = [
 	{
 		src: "img/acessorio1.fw.png",
 		title: "Mousepad Razer",
-		alt: "MMousepad Razer Goliathus verde",
+		alt: "Mousepad Razer Goliathus verde",
 		descr: "Mousepad Razer Goliathus verde",
 	},
 	{
@@ -91,8 +25,8 @@ var acessoriesData = [
 	},
 	{
 		src: "img/acessorio4.fw.png",
-		title: "olante Logitech",
-		alt: "olante Logitech com dois eixos, 3 pedais, cambio e freio de mão",
+		title: "Volante Logitech",
+		alt: "Volante Logitech com dois eixos, 3 pedais, cambio e freio de mão",
 		descr: "Volante Logitech G29",
 	},
 	{
@@ -103,38 +37,10 @@ var acessoriesData = [
 	}
 ];
 
-var hsData =[
-	{
-		src: "img/fone1.fw.png",
-		title: "Fone HyperX",
-		alt: "Fone com microfone HyperX Revolver preto com detales em led Vermelhos",
-		descr: "Fone com microfone HyperX Revolver preto",
-	},
-	{
-		src: "img/fone2.fw.png",
-		title: "Fone Razer",
-		alt: "Fone da marca Razer preto com microfone retrátil e logo da marca iluminado com led",
-		descr: "Fone com microfone Razer Men O' War preto",
-	},
-	{
-		src: "img/fone3.fw.png",
-		title: "Fone Logitech",
-		alt: "Fone Logitech sem fio 7.1 preto e azul",
-		descr: "Fone Logitech sem fio, com microfone preto e azul",
-	},
-	{
-		src: "img/fone4.fw.png",
-		title: "Fone Steelseries",
-		alt: "Fone Steelseries Diablo III preto e vermelho",
-		descr: "Fone Steelseries Diablo III preto e vermelho",
-	}
-];
-
 Template.showMouse.helpers({img_data:mouse_img.find()});
-//Template.showMouse.helpers({img_data:mouseData});
-Template.showKeyboard.helpers({img_data:keyboardData});
-Template.showAcessories.helpers({img_data:acessoriesData});
-Template.showHs.helpers({img_data:hsData});
+Template.showKeyboard.helpers({img_data:keyboard_img.find()});
+Template.showHs.helpers({img_data:hs_img.find()});
+Template.showAcessories.helpers({img_data:acessories_img.find()});
 
 
 
