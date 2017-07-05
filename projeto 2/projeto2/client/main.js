@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
+import '../imports/banco.js';
 
 var mouseData = [
 	{
@@ -129,8 +130,19 @@ var hsData =[
 	}
 ];
 
-Template.showMouse.helpers({img_data:mouseData});
+Template.showMouse.helpers({img_data:mouse_img.find()});
+//Template.showMouse.helpers({img_data:mouseData});
 Template.showKeyboard.helpers({img_data:keyboardData});
 Template.showAcessories.helpers({img_data:acessoriesData});
 Template.showHs.helpers({img_data:hsData});
 
+
+
+var mouseSource = $("#modal").html();
+var geraTemplateModal = Template.geraModal.helpers(mouseSource);
+function displayModalMouse(event){
+	var indice = $(this).data("id");
+	var html = geraTemplateModal(mouseData[indice]);
+	$("#modal-container").html(html);
+	$("#imageModal").modal('show');
+}

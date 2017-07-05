@@ -204,23 +204,26 @@
 </div>
 <!-- Fim rodapé -->
 
+
+<div id="modal-container">
+	{{> geraModal}}
+</div>
+
 </body>
 
 <template name="showMouse">
 	<div class="container">
 		<h1> Mouses </h1>
 		<div class="row">
-		  {{#each img_data}}
-			<div class="col-xs-3 col-md-3">
-				<div class="col-xs-3 col-md-3">
-					<div class="thumbnail product mouse">
+			{{#each img_data}}
+				<div class="col-xs-6 col-md-3">
+					<div class="thumbnail product mouse" data-id="{{@index}}">
 						<img src="{{src}}" alt="{{alt}}" class="product-img">
 						<h3>{{title}}</h3>
 						<p>{{descr}}</p>
 					</div>
 				</div>
-			</div>
-		  {{/each}}
+			{{/each}}
 		</div>
 	</div>
 </template>
@@ -229,17 +232,15 @@
 	<div class="container">
 		<h1> Teclados </h1>
 		<div class="row">
-		  {{#each img_data}}
-			<div class="col-xs-3 col-md-3">
-				<div class="col-xs-3 col-md-3">
-					<div class="thumbnail product keyboard">
+			{{#each img_data}}
+				<div class="col-xs-6 col-md-3">
+					<div class="thumbnail product keyboard" data-id="{{@index}}">
 						<img src="{{src}}" alt="{{alt}}" class="product-img">
 						<h3>{{title}}</h3>
 						<p>{{descr}}</p>
 					</div>
 				</div>
-			</div>
-		  {{/each}}
+			{{/each}}
 		</div>
 	</div>
 </template>
@@ -247,37 +248,45 @@
 <template name="showHs">
 	<div class="container">
 		<h1> Fones </h1>
-		<div class="row">
-		  {{#each img_data}}
-			<div class="col-xs-3 col-md-3">
-				<div class="col-xs-3 col-md-3">
-					<div class="thumbnail product headset">
-						<img src="{{src}}" alt="{{alt}}" class="product-img">
-						<h3>{{title}}</h3>
-						<p>{{descr}}</p>
+			<div class="row">
+				{{#each img_data}}
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product headset" data-id="{{@index}}">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
+				{{/each}}
 			</div>
-		  {{/each}}
 		</div>
-	</div>
 </template>
 
 <template name="showAcessories">
 	<div class="container">
-		<h1> Acessórios </h1>
-		<div class="row">
-		  {{#each img_data}}
-			<div class="col-xs-3 col-md-3">
-				<div class="col-xs-3 col-md-3">
-					<div class="thumbnail product acessories">
-						<img src="{{src}}" alt="{{alt}}" class="product-img">
-						<h3>{{title}}</h3>
-						<p>{{descr}}</p>
+		<h2> Acessórios </h2>
+			<div class="row">
+				{{#each img_data}}
+					<div class="col-xs-6 col-md-3">
+						<div class="thumbnail product acessories" data-id="{{@index}}">
+							<img src="{{src}}" alt="{{alt}}" class="product-img">
+							<h3>{{title}}</h3>
+							<p>{{descr}}</p>
+						</div>
 					</div>
-				</div>
+				{{/each}}
 			</div>
-		  {{/each}}
+		</div>
+</template>
+
+<template name="geraModal">
+<div id="imageModal" class="modal fade">
+	<div class="modal-dialog" style="width:800">
+		<div class="modal-content">
+			<div class="modal-body">
+				<img style="width:100%" src="{{src}}">
+			</div>
 		</div>
 	</div>
+</div>
 </template>
