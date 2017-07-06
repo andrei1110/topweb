@@ -43,3 +43,11 @@ body{
 .list-unstyled a{
 	color: #fff;
 }
+
+#login-buttons a, .accounts-dialog a{
+	text-decoration: none;
+	color: #777;
+}
+#login-buttons a:hover{
+	color: #333;
+}
